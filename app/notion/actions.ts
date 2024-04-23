@@ -18,5 +18,6 @@ export async function create(formData: FormData) {
 
   console.log(res);
 
+  // revalidate
   revalidatePath("/notion");
 }
