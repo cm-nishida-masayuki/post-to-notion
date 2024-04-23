@@ -22,7 +22,7 @@ export default async function NotionPostPage() {
             type="text"
             id="notion"
             name="title"
-            className="border rounded-lg p-2 w-full"
+            className="border rounded-lg p-2 w-full text-black"
           />
         </div>
         <div>
