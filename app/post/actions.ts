@@ -3,6 +3,7 @@
 import { getClient } from "@/utils/notion/clinet";
 import { createClient } from "@/utils/supabase/server";
 import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 
 export async function create(formData: FormData) {
   const supabase = createClient();
@@ -32,7 +33,6 @@ export async function create(formData: FormData) {
     },
   });
 
-  revalidatePath("/notion/post");
-
   console.log(res);
+  revalidatePath("/post");
 }
