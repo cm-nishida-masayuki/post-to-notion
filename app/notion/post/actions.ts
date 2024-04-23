@@ -15,9 +15,6 @@ export async function create(formData: FormData) {
 
   const notion = getClient(targetNotion.integration_token);
 
-  console.log(targetNotion.database_id);
-  console.log(formData.get("title"));
-
   const res = await notion.pages.create({
     parent: {
       database_id: targetNotion.database_id,
